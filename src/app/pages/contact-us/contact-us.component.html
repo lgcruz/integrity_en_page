@@ -19,7 +19,7 @@
       class="w-full py-10 bg-cover flex justify-center md:justify-start items-center"
       style="background-image: url('assets/img/CONTACTANOS.webp')"
     >
-      <form class="md:pl-[10%] w-fit">
+      <form class="md:pl-[10%] w-fit" [formGroup]="form()">
         <div class="space-y-12">
           <div class="rounded-lg shadow-lg py-6 px-12 bg-white">
             <h2 class="font-normal text-[#1e4a98] text-3xl mb-4">
@@ -51,6 +51,7 @@
                       type="text"
                       name="first-name"
                       id="first-name"
+                      formControlName="name"
                       autocomplete="given-name"
                       class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                     />
@@ -81,6 +82,7 @@
                       name="email"
                       type="email"
                       autocomplete="email"
+                      formControlName="email"
                       class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                     />
                   </div>
@@ -105,10 +107,11 @@
                       />
                     </div>
                     <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autocomplete="email"
+                      id="telephone"
+                      name="telephone"
+                      type="tel"
+                      autocomplete="telephone"
+                      formControlName="phone"
                       class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                     />
                   </div>
@@ -127,21 +130,27 @@
                     id="about"
                     name="about"
                     rows="3"
-                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                    formControlName="message"
+                    class="block w-full rounded-md border-0 max-w-[400px] p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                   ></textarea>
                 </div>
               </div>
             </div>
             <div class="mt-6 flex items-center justify-center gap-x-6">
               <button
-                type="submit"
-                class="uppercase rounded-md bg-[#1E4A98] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#508FD4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                [disabled]="form().invalid"
+                ngClass="{'uppercase rounded-md bg-[#1E4A98] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#508FD4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600': true,
+              '':form().invalid}"
               >
                 Send
               </button>
             </div>
           </div>
         </div>
+
+        <!-- <pre class="bg-white rounded-lg break-words max-w-[400px] text-wrap">{{
+          form().value | json
+        }}</pre> -->
       </form>
     </div>
   </div>

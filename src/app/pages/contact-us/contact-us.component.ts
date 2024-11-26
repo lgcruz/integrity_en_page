@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CommonModule, JsonPipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {
   Modal,
   Ripple,
@@ -15,8 +16,8 @@ import { PhoneComponent } from "../../shared/icons/phone/phone.component";
     selector: 'app-contact-us',
     standalone: true,
     imports: [
-    CommonModule, MapComponent,
-    UserComponent,
+    CommonModule, MapComponent, ReactiveFormsModule,
+    UserComponent, JsonPipe,
     MailComponent,
     PhoneComponent
 ],
@@ -29,6 +30,15 @@ import { PhoneComponent } from "../../shared/icons/phone/phone.component";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ContactUsComponent implements OnInit {
+
+  form = signal<FormGroup>(
+    new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      email: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
+      message: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    })
+  );
   ngOnInit(): void {
     initTWE({ Modal, Ripple, Input });
   }
