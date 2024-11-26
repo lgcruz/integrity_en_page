@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'icon-trend-up',
+  selector: 'icon-wrench',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './trend-up.component.html',
+  imports: [],
+  templateUrl: './wrench.component.html',
   styles: `
     :host {
       display: block;
@@ -13,4 +12,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TrendUpComponent {}
+export class WrenchComponent {}
