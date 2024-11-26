@@ -1,0 +1,96 @@
+<section class="footer flex flex-col justify-center w-full">
+  <div class="w-full bg-[#d9d9d9] pt-10">
+    <div class="grid grid-cols-12 py-5">
+      <div class="w-full"></div>
+      <div
+        class="row-span-3 md:row-span-3 lg:row-span-1 col-span-12 md:col-span-4 lg:col-span-2 md:mb-0 flex flex-col items-center justify-center"
+      >
+        <img
+          class="w-48 rounded mx-auto block"
+          srcset="assets/img/logo.webp"
+          alt="Integrity solutions logo"
+        />
+        <p class="text-center max-w-96 mb-8">
+          We have comprehensive technological solutions that adapt to your
+          needs.
+        </p>
+      </div>
+      <div class="w-full hidden lg:block"></div>
+      <div
+        class="mb-6 col-span-12 md:col-span-6 lg:col-span-2 flex flex-col items-center lg:items-start justify-center lg:justify-start -scroll-mt-6"
+      >
+        <p class="mb-3 text-2xl font-bold w-3/4 text-center">Our Network</p>
+        <div class="mb-2">
+          <a class="text-black text-decoration-none" [routerLink]="'/'">
+            Our Clients
+          </a>
+        </div>
+        <div class="mb-2">
+          <a class="text-black text-decoration-none" [routerLink]="'/'"
+            >Our Partnerships</a
+          >
+        </div>
+        <div class="mb-2">
+          <a
+            class="text-black text-decoration-none"
+            [routerLink]="'/contact-us'"
+          >
+            Contact us
+          </a>
+        </div>
+      </div>
+      <div class="w-full block lg:hidden"></div>
+
+      <div
+        class="mb-6 col-span-12 md:col-span-6 lg:col-span-2 flex flex-col items-center lg:items-start justify-center lg:justify-start"
+      >
+        <p class="mb-3 text-2xl font-bold w-3/4 text-center">Our Services</p>
+        <div class="mb-2">
+          <a
+            class="text-black text-decoration-none"
+            [routerLink]="'/services/software-factory'"
+          >
+            Foftware Factory
+          </a>
+        </div>
+      </div>
+      <!-- <hr class="w-full" /> -->
+      <div
+        class="mb-6 col-span-12 md:col-span-6 lg:col-span-2 flex flex-col items-center lg:items-start justify-center lg:justify-start"
+      >
+        <p class="mb-3 text-2xl font-bold">Social Network</p>
+
+        <div class="flex flex-row gap-3 justify-content-center">
+          <a
+            class="text-black text-decoration-none"
+            href="https://www.facebook.com/Integrity.solutions.ec"
+          >
+            <app-icono-facebook class="block w-6 h-6"></app-icono-facebook>
+          </a>
+          <a
+            class="text-black text-decoration-none"
+            href="https://www.instagram.com/integrity.solutions.ec/"
+          >
+            <app-icono-instagram class="block w-6 h-6"></app-icono-instagram>
+          </a>
+
+          <a
+            class="text-black text-decoration-none"
+            href="https://www.linkedin.com/company/integrity-solutions-is-/mycompany/"
+          >
+            <app-icono-linkedin class="block w-6 h-6"></app-icono-linkedin>
+          </a>
+          <a
+            class="text-black text-decoration-none"
+            href="https://www.tiktok.com/@integrity.solutions?lang=es"
+          >
+            <app-icono-tiktok class="block w-6 h-6"></app-icono-tiktok>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-3 text-center bg-black text-white w-100">
+    Integrity Solutions 2024, Guayaquil - Ecuador
+  </div>
+</section>

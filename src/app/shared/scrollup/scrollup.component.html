@@ -1,0 +1,12 @@
+<div class="fixed bottom-0 end-0">
+  @if (showBtn()) {
+  <div
+    (click)="goUp()"
+    class="absolute bottom-4 right-4 rounded-lg bg-[#1E4A98] hover:bg-[#508FD4] m-3 flex justify-center items-center text-white shadow-lg w-10 h-10 cursor-pointer"
+  >
+    <app-icono-chevron-up
+      class="icon-style d-flex align-items-center"
+    ></app-icono-chevron-up>
+  </div>
+  }
+</div>

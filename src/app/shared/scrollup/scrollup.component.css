@@ -1,0 +1,15 @@
+.scroll-up-is {
+  background-color: #2f75c2;
+  cursor: pointer;
+}
+
+.scroll-up-is:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+.icon-style {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
