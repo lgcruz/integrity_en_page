@@ -6,15 +6,12 @@ import { IconoChevronUpComponent } from '@shared/icons/icono-chevron-up/icono-ch
   selector: 'app-scrollup',
   templateUrl: './scrollup.component.html',
   styleUrls: ['./scrollup.component.css'],
-  imports: [IconoChevronUpComponent]
+  imports: [IconoChevronUpComponent],
 })
 export class ScrollupComponent {
-
   showBtn = signal(false);
 
-  constructor() {
-
-  }
+  constructor() {}
   goUp() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
