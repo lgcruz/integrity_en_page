@@ -8,6 +8,11 @@ import { GearsComponent } from '@shared/icons/gears/gears.component';
 import { DisplaySlideComponent } from '../../../shared/display-slide/display-slide.component';
 import { ClockComponent } from '../../../shared/icons/clock/clock.component';
 import { AddUserComponent } from '@shared/icons/add-user/add-user.component';
+import { GearsAnimationComponent } from '../../../shared/icons/gears-animation/gears-animation.component';
+import { UserGroupAnimationComponent } from "../../../shared/icons/user-group-animation/user-group-animation.component";
+import { BoxAnimationComponent } from "../../../shared/icons/box-animation/box-animation.component";
+import { ToolsComponent } from "../../../shared/icons/tools/tools.component";
+import { BoardAnimationComponent } from "../../../shared/icons/board-animation/board-animation.component";
 
 @Component({
   selector: 'app-software-factory',
@@ -21,12 +26,15 @@ import { AddUserComponent } from '@shared/icons/add-user/add-user.component';
     GearsComponent,
     DisplaySlideComponent,
     AddUserComponent,
-  ],
+    GearsAnimationComponent,
+    UserGroupAnimationComponent,
+    BoxAnimationComponent,
+    ToolsComponent,
+    BoardAnimationComponent
+],
   templateUrl: './software-factory.component.html',
   styles: `
-    :host {
-      display: block;
-    }
+
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -5,11 +5,13 @@ import { VueComponent } from '../logos/vue/vue.component';
 import { AspnetComponent } from '../logos/aspnet/aspnet.component';
 import { JqueryComponent } from '../logos/jquery/jquery.component';
 import { BlazorComponent } from '../logos/blazor/blazor.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-display-slide',
   standalone: true,
   imports: [
+    CommonModule,
     AngularComponent,
     ReactComponent,
     VueComponent,
@@ -28,16 +30,23 @@ import { BlazorComponent } from '../logos/blazor/blazor.component';
 export class DisplaySlideComponent {
   public stackList = [
     {
-      title: 'Frontend Languages & Frameworks',
+      title: 'Frontend',
       stack: 'front',
+      subsection: ['Web', 'Mobile', 'Desktop'],
     },
     {
       title: 'Backend ',
-      stack: 'front',
+      stack: 'back',
+      subsection: ['Languages', 'Databases'],
     },
     {
-      title: 'Frontend Languages & Frameworks',
-      stack: 'front',
+      title: 'Business Intelligence',
+      stack: 'bi',
+    },
+    {
+      title: 'DevOps',
+      stack: 'devops ',
+      subsection: ['Testing', 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'],
     },
   ];
 }
