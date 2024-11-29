@@ -1,18 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { WrenchComponent } from '../../../shared/icons/wrench/wrench.component';
 import { JigsawComponent } from '@shared/icons/jigsaw/jigsaw.component';
 import { StepsComponent } from '@shared/icons/steps/steps.component';
 import { TrendUpComponent } from '../../../shared/icons/trend-up/trend-up.component';
 import { GearsComponent } from '@shared/icons/gears/gears.component';
 import { DisplaySlideComponent } from '../../../shared/display-slide/display-slide.component';
-import { ClockComponent } from '../../../shared/icons/clock/clock.component';
 import { AddUserComponent } from '@shared/icons/add-user/add-user.component';
-import { GearsAnimationComponent } from '../../../shared/icons/gears-animation/gears-animation.component';
-import { UserGroupAnimationComponent } from "../../../shared/icons/user-group-animation/user-group-animation.component";
-import { BoxAnimationComponent } from "../../../shared/icons/box-animation/box-animation.component";
-import { ToolsComponent } from "../../../shared/icons/tools/tools.component";
-import { BoardAnimationComponent } from "../../../shared/icons/board-animation/board-animation.component";
+import { ProjectPhasesComponent } from './components/project-phases/project-phases.component';
 
 @Component({
   selector: 'app-software-factory',
@@ -26,12 +21,8 @@ import { BoardAnimationComponent } from "../../../shared/icons/board-animation/b
     GearsComponent,
     DisplaySlideComponent,
     AddUserComponent,
-    GearsAnimationComponent,
-    UserGroupAnimationComponent,
-    BoxAnimationComponent,
-    ToolsComponent,
-    BoardAnimationComponent
-],
+    ProjectPhasesComponent,
+  ],
   templateUrl: './software-factory.component.html',
   styles: `
 
@@ -39,7 +30,6 @@ import { BoardAnimationComponent } from "../../../shared/icons/board-animation/b
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class SoftwareFactoryComponent {
-  public steps = signal<0 | 1 | 2 | 3 | 4 | 5>(0);
   public serviceTypes = [
     {
       title: 'New Developments',
@@ -72,12 +62,4 @@ export default class SoftwareFactoryComponent {
         'Fixing errors and defects in production solutions to ensure business functionality and availability.',
     },
   ];
-
-  public selectStep(number: 1 | 2 | 3 | 4 | 5): void {
-    if (this.steps() === number) {
-      this.steps.set(0);
-    } else {
-      this.steps.set(number);
-    }
-  }
 }

@@ -2,7 +2,11 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./src/**/*.{html,ts}", "./node_modules/tw-elements/js/**/*.js"],
+  content: [
+    "./src/**/*.{html,ts}",
+    "./node_modules/tw-elements/js/**/*.js",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     extend: {
       textShadow: {
@@ -15,34 +19,35 @@ module.exports = {
       },
       colors: {
         primary: {
-          100: "#fefcfb",
-          200: "#1282a2",
+          // "#fefcfb"
+          50: "#c7d2e5",
+          100: "#8fa5cc",
+          200: "#728ebf",
+          300: "#5677b2",
+          400: "#3a61a5",
           500: "#1E4A98",
-          400: "#034078",
-          600: "#001f54",
-          800: "#0a1128",
+          600: "#163872",
+          700: "#132e5f",
+          800: "#0f254c",
+          900: "#071226",
         },
         secondary: {
-          100: "#e5c7d2",
-          200: "#cc8fa5",
-          400: "#b25677",
-          500: "#981e4a",
-          600: "#5f132e",
-          800: "#390b1c",
-        },
-        terciary: {
-          100: "#d2e5c7",
-          200: "#a5cc8f",
-          400: "#77b256",
-          500: "#4a981e",
-          600: "#387216",
-          800: "#1c390b",
+          100: "#f2ede3",
+          200: "#d8c8ab",
+          300: "#bfa372",
+          400: "#a57e3a",
+          500: "#986c1e",
+          600: "#855f1a",
+          700: "#5f4413",
+          800: "#4c360f",
+          900: "#261b07",
         },
       },
     },
   },
   plugins: [
     require("tw-elements/plugin.cjs"),
+    require("flowbite/plugin"),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {

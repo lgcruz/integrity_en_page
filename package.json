@@ -22,6 +22,7 @@
     "@angular/router": "^18.1.0",
     "@coreui/angular": "^4.8.0",
     "@coreui/icons-angular": "^5.2.22",
+    "flowbite": "^2.5.2",
     "lottie-web": "^5.12.2",
     "ngx-lottie": "^12.0.0",
     "rxjs": "~7.8.0",

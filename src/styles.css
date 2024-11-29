@@ -74,9 +74,24 @@ div:hover > icon-tools-animation #screw-icon-tools {
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 
-div:hover > icon-board-animation .rainbow-animation-pulse {
-  animation-name: change-fill;
+div:hover > icon-board-animation .rainbow-animation-first {
+  animation-name: change-fill-1;
   animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+div:hover > icon-board-animation .rainbow-animation-second {
+  animation-name: change-fill-2;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+div:hover > icon-board-animation .rainbow-animation-third {
+  animation-name: change-fill-3;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 
@@ -89,11 +104,43 @@ div:hover > icon-board-animation .rainbow-animation-pulse {
   }
 }
 
-@keyframes change-fill {
+@keyframes change-fill-1 {
   0% {
     fill: #69b7eb;
   }
-  50% {
+  40% {
+    fill: #b3dbd3;
+  }
+  80% {
+    fill: #f4d6db;
+  }
+  100% {
+    fill: #69b7eb;
+  }
+}
+
+@keyframes change-fill-2 {
+  0% {
+    fill: #b3dbd3;
+  }
+  40% {
+    fill: #f4d6db;
+  }
+  80% {
+    fill: #69b7eb;
+  }
+  100% {
+    fill: #b3dbd3;
+  }
+}
+@keyframes change-fill-3 {
+  0% {
+    fill: #f4d6db;
+  }
+  40% {
+    fill: #69b7eb;
+  }
+  80% {
     fill: #b3dbd3;
   }
   100% {
