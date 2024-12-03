@@ -31,31 +31,35 @@
           <div class="bg-gray-300 rounded-t-lg px-2 pt-2">{{ section }}</div>
           }
         </div>
-
         }
         <div
           class="flex rounded-none sm:rounded-xl items-center overflow-hidden py-4 mb-6 mx-0 2sm:mx-6 bg-gray-300"
         >
           <div class="overflow-y-auto scroll-smooth max-h-[344px]">
-            <div class="flex flex-wrap justify-center box-border gap-4">
+            <div class="flex flex-wrap justify-center box-border gap-4 mx-2">
+              @switch (stack.stack) { @case ('front') {
               <svg-angular class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-vue class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-aspnet class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-jquery class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-blazor class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-angular class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-vue class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-aspnet class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-jquery class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-blazor class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-angular class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-vue class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-aspnet class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-jquery class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-blazor class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-thymeleaf class="w-full max-w-20 h-auto max-h-20 block" />
+              } @case ('back') {
+              <svg-redis class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-mongo class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-elastic-search
+                class="w-full max-w-20 h-auto max-h-20 block"
+              />
+              <svg-postgres class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-mysql class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-flask class="w-full max-w-20 h-auto max-h-20 block" />
+
+              } @case ('bi') {
+              <svg-power-bi class="w-full max-w-20 h-auto max-h-20 block" />
+              } @case ('devops') {
+              <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
+              } }
             </div>
           </div>
         </div>

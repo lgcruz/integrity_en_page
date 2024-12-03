@@ -8,6 +8,7 @@ import { GearsComponent } from '@shared/icons/gears/gears.component';
 import { DisplaySlideComponent } from '../../../shared/display-slide/display-slide.component';
 import { AddUserComponent } from '@shared/icons/add-user/add-user.component';
 import { ProjectPhasesComponent } from './components/project-phases/project-phases.component';
+import { TestModuleComponent } from "./components/test-module/test-module.component";
 
 @Component({
   selector: 'app-software-factory',
@@ -22,7 +23,8 @@ import { ProjectPhasesComponent } from './components/project-phases/project-phas
     DisplaySlideComponent,
     AddUserComponent,
     ProjectPhasesComponent,
-  ],
+    TestModuleComponent
+],
   templateUrl: './software-factory.component.html',
   styles: `
 

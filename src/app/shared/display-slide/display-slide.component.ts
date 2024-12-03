@@ -6,6 +6,15 @@ import { AspnetComponent } from '../logos/aspnet/aspnet.component';
 import { JqueryComponent } from '../logos/jquery/jquery.component';
 import { BlazorComponent } from '../logos/blazor/blazor.component';
 import { CommonModule } from '@angular/common';
+import { ThymeleafComponent } from "../logos/thymeleaf/thymeleaf.component";
+import { RedisComponent } from '@shared/logos/redis/redis.component';
+import { MongoComponent } from "../logos/mongo/mongo.component";
+import { ElasticSearchComponent } from '@shared/logos/elastic-search/elastic-search.component';
+import { PostgresComponent } from '@shared/logos/postgres/postgres.component';
+import { MysqlComponent } from "../logos/mysql/mysql.component";
+import { FlaskComponent } from '@shared/logos/flask/flask.component';
+import { PowerBiComponent } from '@shared/logos/power-bi/power-bi.component';
+import { PostmanComponent } from '@shared/logos/postman/postman.component';
 
 @Component({
   selector: 'app-display-slide',
@@ -18,7 +27,16 @@ import { CommonModule } from '@angular/common';
     AspnetComponent,
     JqueryComponent,
     BlazorComponent,
-  ],
+    ThymeleafComponent,
+    RedisComponent,
+    MongoComponent,
+    ElasticSearchComponent,
+    PostgresComponent,
+    MysqlComponent,
+    FlaskComponent,
+    PowerBiComponent,
+    PostmanComponent
+],
   templateUrl: './display-slide.component.html',
   styles: `
     :host {
@@ -32,12 +50,14 @@ export class DisplaySlideComponent {
     {
       title: 'Frontend',
       stack: 'front',
-      subsection: ['Web', 'Mobile', 'Desktop'],
+      subsection: [
+        // 'Web', 'Mobile', 'Desktop'
+      ],
     },
     {
       title: 'Backend ',
       stack: 'back',
-      subsection: ['Languages', 'Databases'],
+      // subsection: ['Languages', 'Databases'],
     },
     {
       title: 'Business Intelligence',
@@ -46,7 +66,7 @@ export class DisplaySlideComponent {
     {
       title: 'DevOps',
       stack: 'devops ',
-      subsection: ['Testing', 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'],
+      // subsection: ['Testing', 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'],
     },
   ];
 }
