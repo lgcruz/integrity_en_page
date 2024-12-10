@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Carousel, initTWE } from 'tw-elements';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './carousel.component.html',
   styles: `
     :host {

@@ -1,5 +1,9 @@
 <section class="footer flex flex-col justify-center w-full">
-  <div class="w-full bg-[#d9d9d9] pt-10">
+  <div class="w-full bg-[#d9d9d9] pt-10 relative">
+    <icon-circuit
+      class="w-16 h-auto absolute left-0 bottom-4 rotate-180 fill-primary-700"
+    />
+    <icon-circuit class="w-16 h-auto absolute right-0 top-4 fill-primary-600" />
     <div class="grid grid-cols-12 py-5">
       <div class="w-full"></div>
       <div
@@ -21,18 +25,18 @@
       >
         <p class="mb-3 text-2xl font-bold w-3/4 text-center">Our Network</p>
         <div class="mb-2">
-          <a class="text-black text-decoration-none" [routerLink]="'/'">
+          <a class="text-gray-700 text-decoration-none" [routerLink]="'/'">
             Our Clients
           </a>
         </div>
         <div class="mb-2">
-          <a class="text-black text-decoration-none" [routerLink]="'/'"
+          <a class="text-gray-700 text-decoration-none" [routerLink]="'/'"
             >Our Partnerships</a
           >
         </div>
         <div class="mb-2">
           <a
-            class="text-black text-decoration-none"
+            class="text-gray-700 text-decoration-none"
             [routerLink]="'/contact-us'"
           >
             Contact us
@@ -47,7 +51,7 @@
         <p class="mb-3 text-2xl font-bold w-3/4 text-center">Our Services</p>
         <div class="mb-2">
           <a
-            class="text-black text-decoration-none"
+            class="text-gray-700 text-decoration-none"
             [routerLink]="'/services/software-factory'"
           >
             Software Factory
@@ -91,6 +95,6 @@
     </div>
   </div>
   <div class="p-3 text-center bg-black text-white w-100">
-    Integrity Solutions 2024, Guayaquil - Ecuador
+    Integrity Solutions {{ date.getFullYear() }}, Guayaquil - Ecuador
   </div>
 </section>

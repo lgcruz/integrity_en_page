@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   standalone: true,
-  selector: 'app-icono-whatsapp',
+  selector: 'icon-whatsapp',
   templateUrl: './icono-whatsapp.component.html',
 })
 export class IconoWhatsappComponent {

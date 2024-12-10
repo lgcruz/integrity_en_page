@@ -1,5 +1,11 @@
 <app-carousel />
-<div class="w-full flex items-center justify-center flex-col mb-24">
+<div class="w-full flex items-center justify-center flex-col mb-24 relative">
+  <icon-circuit
+    class="w-16 h-auto absolute left-0 top-24 rotate-180 fill-primary-700"
+  />
+  <icon-circuit
+    class="w-16 h-auto absolute right-0 bottom-4 fill-primary-600"
+  />
   <div
     class="max-w-[800px] w-full md:w-4/5 pt-24 pb-12 flex flex-col justify-center items-center"
   >
@@ -32,7 +38,7 @@
       <div class="flex mt-6">
         <button
           routerLink="/services/software-factory"
-          class="px-6 py-2 bg-[#1e4a98] text-white rounded-lg"
+          class="px-6 py-2 bg-primary-500 hover:bg-primary-300 text-white rounded-lg"
         >
           Learn more
         </button>

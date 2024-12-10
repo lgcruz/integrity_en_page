@@ -95,6 +95,13 @@ div:hover > icon-board-animation .rainbow-animation-third {
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 
+div.rotate-y-axis:hover img {
+  animation-name: rotate-y;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
 @keyframes jiggle {
   0% {
     transform: rotate(-1deg);
@@ -196,6 +203,17 @@ div:hover > icon-board-animation .rainbow-animation-third {
   100% {
     -webkit-transform: rotate3d(0, 0, 1, 360deg);
     transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes rotate-y {
+  0% {
+    -webkit-transform: rotate3d(0, 1, 1, 0deg);
+    transform: rotate3d(0, 1, 1, 0deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
   }
 }
 
