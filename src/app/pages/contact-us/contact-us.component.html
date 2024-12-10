@@ -53,7 +53,7 @@
                       id="first-name"
                       formControlName="name"
                       autocomplete="given-name"
-                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -83,7 +83,7 @@
                       type="email"
                       autocomplete="email"
                       formControlName="email"
-                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -112,7 +112,7 @@
                       type="tel"
                       autocomplete="telephone"
                       formControlName="phone"
-                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                      class="block w-full rounded-md border-0 ps-10 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -131,7 +131,7 @@
                     name="about"
                     rows="3"
                     formControlName="message"
-                    class="block w-full rounded-md border-0 max-w-[400px] p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                    class="block w-full rounded-md border-0 max-w-[400px] p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm/6"
                   ></textarea>
                 </div>
               </div>
@@ -139,7 +139,7 @@
             <div class="mt-6 flex items-center justify-center gap-x-6">
               <button
                 [disabled]="form().invalid"
-                ngClass="{'uppercase rounded-md bg-[#1E4A98] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#508FD4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600': true,
+                ngClass="{'uppercase rounded-md cursor-pointer bg-[#1E4A98] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#508FD4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600': true,
               '':form().invalid}"
               >
                 Send

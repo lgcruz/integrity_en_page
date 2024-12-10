@@ -10,6 +10,42 @@
 
 label {
   color: darkcyan;
-  background: gray;
+  background: whitesmoke;
   padding: 4px;
+}
+
+
+
+[title~="HelloWorld"] {
+  color: darkblue;
+}
+
+[title*="World"] {
+  color: darkorange;
+}
+
+div p {
+  background-color: antiquewhite;
+  padding: 3px;
+  border-radius: 15px;
+}
+
+[secret-value] {
+  background-color: greenyellow;
+  display: block;
+  width:fit-content;
+  padding: 6px;
+  border-radius: 15px;
+}
+
+.header ~ div {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.header + div {
+  background-color: darkred;
+  color: lightcoral;
+  padding: 3px;
+  border-radius: 15px;
 }

@@ -15,6 +15,11 @@ import { MysqlComponent } from "../logos/mysql/mysql.component";
 import { FlaskComponent } from '@shared/logos/flask/flask.component';
 import { PowerBiComponent } from '@shared/logos/power-bi/power-bi.component';
 import { PostmanComponent } from '@shared/logos/postman/postman.component';
+import { GitComponent } from '@shared/logos/git/git.component';
+import { JenkingsComponent } from '@shared/logos/jenkings/jenkings.component';
+import { SqlServerComponent } from '@shared/logos/sql-server/sql-server.component';
+import { AwsComponent } from '@shared/logos/aws/aws.component';
+import { AzureComponent } from '@shared/logos/azure/azure.component';
 
 @Component({
   selector: 'app-display-slide',
@@ -35,7 +40,12 @@ import { PostmanComponent } from '@shared/logos/postman/postman.component';
     MysqlComponent,
     FlaskComponent,
     PowerBiComponent,
-    PostmanComponent
+    PostmanComponent,
+    GitComponent,
+    JenkingsComponent,
+    SqlServerComponent,
+    AwsComponent,
+    AzureComponent
 ],
   templateUrl: './display-slide.component.html',
   styles: `
@@ -65,7 +75,7 @@ export class DisplaySlideComponent {
     },
     {
       title: 'DevOps',
-      stack: 'devops ',
+      stack: 'devops',
       // subsection: ['Testing', 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'],
     },
   ];
