@@ -3,11 +3,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CircuitComponent } from '@shared/icons/circuirt/circuit.component';
+import { ClientsAlliancesComponent } from '../../shared/clients-alliances/clients-alliances.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, CarouselComponent, CircuitComponent],
+  imports: [
+    CommonModule,
+    RouterModule,
+    CarouselComponent,
+    CircuitComponent,
+    ClientsAlliancesComponent,
+  ],
   templateUrl: './home.component.html',
   styles: `
     :host {
@@ -16,20 +23,4 @@ import { CircuitComponent } from '@shared/icons/circuirt/circuit.component';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HomeComponent {
-  rutaclientes: string = 'assets/img/socios/clientes';
-  rutaalianzas: string = 'assets/img/socios/alianzas';
-  clientes: string[] = [];
-  alianzas: string[] = [];
-
-  constructor() {
-    this.mostrarimg();
-  }
-
-  mostrarimg() {
-    for (let i = 1; i <= 29; i++) {
-      this.clientes.push(this.rutaclientes + '/' + i + '.png');
-      if (i <= 10) this.alianzas.push(this.rutaalianzas + '/' + i + '.png');
-    }
-  }
-}
+export default class HomeComponent {}

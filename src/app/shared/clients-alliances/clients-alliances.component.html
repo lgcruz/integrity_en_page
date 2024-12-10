@@ -1,0 +1,41 @@
+<section class="w-full box-border bg-[#f3f6ff] mt-8">
+  <div id="is-clients" class="justify-center w-full" id="clientes">
+    <h2
+      class="w-full text-center text-[#1e4a98] font-semibold text-3xl pb-8 pt-4"
+    >
+      Our Clients
+    </h2>
+    <div class="flex overflow-hidden w-full h-auto items-center">
+      <div class="relative overflow-x-hidden h-[9rem] w-full text-center">
+        <div
+          class="absolute flex left-0 right-0 w-[inherit]"
+          style="animation: primary 60s linear infinite"
+        >
+          @for (image of clientes; track $index) {
+          <img class="object-contain w-[175px] aspect-[3/2]" [src]="image" />
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="is-partners" class="justify-center w-full">
+    <h2
+      class="w-full text-center text-[#1e4a98] font-semibold text-3xl pb-8 pt-2"
+    >
+      Our Alliances
+    </h2>
+    <div class="flex overflow-hidden w-full h-auto items-center">
+      <div class="relative overflow-x-hidden h-[9rem] w-full text-center">
+        <div
+          class="absolute flex left-0 right-0 w-[inherit]"
+          style="animation: secondary 10s linear infinite"
+        >
+          @for (image of alianzas; track $index) {
+          <img class="object-contain w-[175px] aspect-[3/2]" [src]="image" />
+
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
