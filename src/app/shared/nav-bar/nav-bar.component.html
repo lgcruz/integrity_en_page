@@ -56,6 +56,15 @@
         >{{ route.data["navName"] }}</a
       >
 
+      } @else if (route.data && route.children && route.data['type'] === 3 &&
+      route.children.length > 0) {
+      <a
+        [routerLink]="route.path + '/' + route.children[0].path"
+        routerLinkActive="bg-[#1E4A98] text-white "
+        class="text-sm/6 font-semibold text-gray-900 rounded-lg px-3 py-2 hover:bg-[#1E4A98] hover:text-white"
+        >{{ route.children[0].data?.['navName'] }}</a
+      >
+
       } @else {
       <div class="relative">
         <button

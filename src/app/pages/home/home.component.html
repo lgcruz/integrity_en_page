@@ -1,4 +1,4 @@
-<app-carousel />
+<app-hero />
 <div class="w-full flex items-center justify-center flex-col mb-24 relative">
   <icon-circuit
     class="w-16 h-auto absolute left-0 top-24 rotate-180 fill-primary-700"
@@ -10,13 +10,17 @@
     class="max-w-[800px] w-full md:w-4/5 pt-24 pb-12 flex flex-col justify-center items-center"
   >
     <h2 class="text-3xl sm:text-5xl text-center font-bold text-[#1e4a98] mb-4">
-      Our Services
+      Our Service
     </h2>
-    <p class="text-lg w-4/5">
-      At Integrity Solutions we are committed with the growth and efficiency of
+    <p class="text-lg w-full">
+      At Integrity Solutions, we are committed to guaranteeing our client the
+      completion and success of their software development project. We have a
+      dedicated team with experience, knowledge, work methodologies, and the
+      tools to make your project a reality.
+      <!-- At Integrity Solutions we are committed with the growth and efficiency of
       your Organization, we have the knowledge, work methodologies and the tools
       so that your company remains aligned with compliance with regulations and
-      good industry practices.
+      good industry practices. -->
     </p>
   </div>
   <div class="w-4/5 flex flex-col-reverse lg:flex-row items-center">
@@ -24,23 +28,32 @@
       class="w-full lg:w-[50%] px-0 sm:px-10 py-4 lg:p-10 flex flex-col items-end justify-between"
     >
       <div>
-        <h2 class="text-2xl text-gray-600 font-semibold mb-3">
+        <h2 class="text-4xl text-gray-600 font-semibold mb-3">
           Software Factory
         </h2>
-        <p class="text-gray-500">
-          In our development factories we integrate technologies, managing
+        <div class="text-xl">
+          <p class="text-gray-600">
+            Full stack that delivers end-to-end service for your business
+          </p>
+          <ul class="list-disc ml-4 text-gray-500">
+            <li>Project consulting and advisory services</li>
+            <li>Full stack service for your business</li>
+            <li>Security of your information</li>
+            <li>Outgoing Project management</li>
+          </ul>
+          <!-- In our development factories we integrate technologies, managing
           projects, achieving tangible results based on agile approaches, in
           addition to being characterized by predictable development activities
           and reduction in the amount of work due to the reuse of components for
-          the highest quality results.
-        </p>
+          the highest quality results. -->
+        </div>
       </div>
       <div class="flex mt-6">
         <button
-          routerLink="/services/software-factory"
-          class="px-6 py-2 bg-primary-500 hover:bg-primary-300 text-white rounded-lg"
+          routerLink="/contact-us"
+          class="px-6 py-2 bg-primary-500 hover:bg-white text-white hover:text-primary-500 rounded-lg hover:border-solid hover:border-primary-500 border-[2px]"
         >
-          Learn more
+          Contact us
         </button>
       </div>
     </div>

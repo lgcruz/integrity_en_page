@@ -11,6 +11,7 @@ import { MapComponent } from './components/map/map.component';
 import { UserComponent } from "../../shared/icons/user/user.component";
 import { MailComponent } from "../../shared/icons/mail/mail.component";
 import { PhoneComponent } from "../../shared/icons/phone/phone.component";
+import { ClientsAlliancesComponent } from "../../shared/clients-alliances/clients-alliances.component";
 
 @Component({
     selector: 'app-contact-us',
@@ -19,7 +20,8 @@ import { PhoneComponent } from "../../shared/icons/phone/phone.component";
     CommonModule, MapComponent, ReactiveFormsModule,
     UserComponent, JsonPipe,
     MailComponent,
-    PhoneComponent
+    PhoneComponent,
+    ClientsAlliancesComponent
 ],
     templateUrl: './contact-us.component.html',
     styles: `

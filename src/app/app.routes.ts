@@ -16,7 +16,7 @@ export const routes: Routes = [
       title: 'Services',
       data: {
         navName: 'Services',
-        type: 2
+        type: 3
       },
       // redirectTo: 'services/software-factory',
       loadComponent: () => import('./pages/services/services.component'),

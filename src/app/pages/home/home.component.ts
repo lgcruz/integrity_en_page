@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CircuitComponent } from '@shared/icons/circuirt/circuit.component';
 import { ClientsAlliancesComponent } from '../../shared/clients-alliances/clients-alliances.component';
+import { HeroComponent } from "./components/hero/hero.component";
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,11 @@ import { ClientsAlliancesComponent } from '../../shared/clients-alliances/client
   imports: [
     CommonModule,
     RouterModule,
-    CarouselComponent,
+    // CarouselComponent,
     CircuitComponent,
     ClientsAlliancesComponent,
-  ],
+    HeroComponent
+],
   templateUrl: './home.component.html',
   styles: `
     :host {
