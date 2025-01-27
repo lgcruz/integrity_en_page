@@ -1,18 +1,22 @@
 <div class="flex justify-center">
-  <h2 class="text-3xl sm:text-5xl text-center font-bold text-[#1e4a98] mb-8">
+  <h2 class="text-3xl sm:text-5xl text-center font-bold text-[#1e4a98] mb-16">
     Tools & Technologies used
   </h2>
 </div>
-<div class="w-full">
-  <div class="w-full h-auto flex justify-center relative p-0 2sm:p-10">
+<div class="w-full flex items-center justify-center">
+  <div
+    class="w-full mx-6 lg:w-4/5 lg:m-0 h-auto flex justify-center relative p-0 2sm:p-18"
+  >
     <!-- <div
       class="w-full h-full absolute bg-cover brightness-50 bg-center filter top-0 bottom-0 z-[-1]"
       style="background-image: url('assets/img/office-laptops.jpg')"
     ></div> -->
-    <div class="grid grid-cols-1 justify-center w-full gap-16">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 max-w-[900px] lg:max-w-full justify-center items-center w-full gap-12"
+    >
       @for (stack of stackList; track $index; let total = $count) {
       <div
-        class="box-border flex flex-row justify-center items-center relative sm:rounded-b-3xl sm:rounded-tr-3xl flex-1 bg-gray-100 sm:mx-8"
+        class="box-border flex flex-row justify-center items-center relative sm:rounded-b-3xl sm:rounded-tr-3xl flex-1 bg-gray-100"
       >
         <!-- <div
           [ngClass]="{
@@ -20,7 +24,7 @@
           }"
         ></div> -->
         <p
-          class="text-white bg-gray-700 w-full sm:w-auto 2sm:rounded-t-xl sm:rounded-tl-xl absolute top-[-28px] left-0 z-10 text-lg font-semibold text-center px-4"
+          class="text-white bg-gray-700 w-full rounded-none sm:w-auto sm:rounded-tl-xl absolute top-[-28px] left-0 z-10 text-lg font-semibold text-center px-4"
         >
           {{ stack.title }}:
         </p>
@@ -67,6 +71,11 @@
               } } } @if (idxSection === 1) { @switch (stack.stack) { @case
               ('front') {
               <svg-ionic class="w-full max-w-20 h-20 max-h-20 block" />
+              <svg-unity class="w-full max-w-20 h-20 max-h-20 block" />
+              <svg-swift class="w-full max-w-20 h-20 max-h-20 block" />
+              <svg-kotlin class="w-full max-w-20 h-20 max-h-20 block" />
+              <svg-flutter class="w-full max-w-20 h-20 max-h-20 block" />
+              <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
               }@case ('back') {
               <!-- <svg-redis class="w-full max-w-20 h-auto max-h-20 block" /> -->
               <svg-mysql class="w-full max-w-20 h-auto max-h-20 block" />
@@ -82,7 +91,18 @@
 
               <svg-flask class="w-full max-w-20 h-auto max-h-20 block" /> -->
 
-              } } }
+              } } } @if (idxSection === 2) { @switch (stack.stack) { @case
+              ('front') {
+              <svg-figma class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-adobe-xd class="w-full max-w-20 h-auto max-h-20 block" />
+              }
+              <!-- <svg-elastic-search
+                  class="w-full max-w-20 h-auto max-h-20 block"
+                />
+
+                <svg-flask class="w-full max-w-20 h-auto max-h-20 block" /> -->
+
+              } }
             </div>
           </div>
           }

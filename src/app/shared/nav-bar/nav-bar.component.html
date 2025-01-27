@@ -192,7 +192,7 @@
   @if (this.mobileMenu()) {
   <div class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-10"></div>
+    <div class="fixed inset-0 z-100"></div>
     <div
       class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
     >
@@ -239,6 +239,16 @@
               (click)="toogleMobileMenu()"
               class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 text-center"
               >{{ route.data["navName"] }}</a
+            >
+
+            } @else if (route.data && route.children && route.data['type'] === 3
+            && route.children.length > 0) {
+            <a
+              [routerLink]="route.path + '/' + route.children[0].path"
+              routerLinkActive="bg-blue-100"
+              (click)="toogleMobileMenu()"
+              class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 text-center"
+              >{{ route.children[0].data?.['navName'] }}</a
             >
 
             } @else {

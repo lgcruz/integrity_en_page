@@ -6,12 +6,12 @@ import { AspnetComponent } from '../logos/aspnet/aspnet.component';
 import { JqueryComponent } from '../logos/jquery/jquery.component';
 import { BlazorComponent } from '../logos/blazor/blazor.component';
 import { CommonModule } from '@angular/common';
-import { ThymeleafComponent } from "../logos/thymeleaf/thymeleaf.component";
+import { ThymeleafComponent } from '../logos/thymeleaf/thymeleaf.component';
 import { RedisComponent } from '@shared/logos/redis/redis.component';
-import { MongoComponent } from "../logos/mongo/mongo.component";
+import { MongoComponent } from '../logos/mongo/mongo.component';
 import { ElasticSearchComponent } from '@shared/logos/elastic-search/elastic-search.component';
 import { PostgresComponent } from '@shared/logos/postgres/postgres.component';
-import { MysqlComponent } from "../logos/mysql/mysql.component";
+import { MysqlComponent } from '../logos/mysql/mysql.component';
 import { FlaskComponent } from '@shared/logos/flask/flask.component';
 import { PowerBiComponent } from '@shared/logos/power-bi/power-bi.component';
 import { PostmanComponent } from '@shared/logos/postman/postman.component';
@@ -20,13 +20,19 @@ import { JenkingsComponent } from '@shared/logos/jenkings/jenkings.component';
 import { SqlServerComponent } from '@shared/logos/sql-server/sql-server.component';
 import { AwsComponent } from '@shared/logos/aws/aws.component';
 import { AzureComponent } from '@shared/logos/azure/azure.component';
-import { HtmlComponent } from "../logos/html/html.component";
-import { JavascriptComponent } from "../logos/javascript/javascript.component";
-import { TypescriptComponent } from "../logos/typescript/typescript.component";
-import { IonicComponent } from "../logos/ionic/ionic.component";
-import { JavaComponent } from "../logos/java/java.component";
-import { SybaseComponent } from "../logos/sybase/sybase.component";
-import { OracleComponent } from "../logos/oracle/oracle.component";
+import { HtmlComponent } from '../logos/html/html.component';
+import { JavascriptComponent } from '../logos/javascript/javascript.component';
+import { TypescriptComponent } from '../logos/typescript/typescript.component';
+import { IonicComponent } from '../logos/ionic/ionic.component';
+import { JavaComponent } from '../logos/java/java.component';
+import { SybaseComponent } from '../logos/sybase/sybase.component';
+import { OracleComponent } from '../logos/oracle/oracle.component';
+import { UnityComponent } from '../logos/unity/unity.component';
+import { SwiftComponent } from '../logos/swift/swift.component';
+import { KotlinComponent } from '../logos/kotlin/kotlin.component';
+import { FlutterComponent } from '../logos/flutter/flutter.component';
+import { FigmaComponent } from '../logos/figma/figma.component';
+import { AdobeXdComponent } from '../logos/adobe-xd/adobe-xd.component';
 
 @Component({
   selector: 'app-display-slide',
@@ -59,8 +65,14 @@ import { OracleComponent } from "../logos/oracle/oracle.component";
     IonicComponent,
     JavaComponent,
     SybaseComponent,
-    OracleComponent
-],
+    OracleComponent,
+    UnityComponent,
+    SwiftComponent,
+    KotlinComponent,
+    FlutterComponent,
+    FigmaComponent,
+    AdobeXdComponent,
+  ],
   templateUrl: './display-slide.component.html',
   styles: `
     :host {
@@ -75,9 +87,7 @@ export class DisplaySlideComponent {
       title: 'Frontend Development',
       stack: 'front',
 
-      subsection: [
-        'Languages', 'Mobile', 'UX/UI Design'
-      ],
+      subsection: ['Languages', 'Mobile', 'UX/UI Design'],
     },
     {
       title: 'Backend Development',
@@ -87,9 +97,10 @@ export class DisplaySlideComponent {
     {
       title: 'DevOps Tools',
       stack: 'devops',
-      subsection: ['Testing',
-      // 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'
-    ],
+      subsection: [
+        'Testing',
+        // 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'
+      ],
     },
     // {
     //   title: 'Business Intelligence',
@@ -99,7 +110,6 @@ export class DisplaySlideComponent {
     {
       title: 'Others',
       stack: 'bi',
-
     },
   ];
 }
