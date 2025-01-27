@@ -24,7 +24,7 @@
           }"
         ></div> -->
         <p
-          class="text-white bg-gray-700 w-full rounded-none sm:w-auto sm:rounded-tl-xl absolute top-[-28px] left-0 z-10 text-lg font-semibold text-center px-4"
+          class="text-white bg-gray-700 w-full rounded-none sm:w-auto sm:rounded-t-xl absolute top-[-28px] left-0 z-10 text-lg font-semibold text-center px-4"
         >
           {{ stack.title }}:
         </p>
@@ -58,14 +58,21 @@
                 <svg-thymeleaf class="w-full max-w-20 h-auto max-h-20 block" /> -->
               } @case ('back') {
               <svg-java class="w-full max-w-20 h-auto max-h-20 block" />
-
+              <svg-netframework class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-netcore
+                class="w-full max-w-20 h-auto max-h-20 !flex items-center justify-center"
+              />
+              <svg-python class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-ruby class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-php class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-nodejs class="w-full max-w-20 h-auto max-h-20 block" />
               } @case ('bi') {
               <!-- <svg-power-bi class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-sql-server class="w-full max-w-20 h-auto max-h-20 block" /> -->
+               -->
               } @case ('devops') {
-              <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
+              <!-- <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-git class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" /> -->
               <svg-aws class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-azure class="w-full max-w-20 h-auto max-h-20 block" />
               } } } @if (idxSection === 1) { @switch (stack.stack) { @case
@@ -78,23 +85,26 @@
               <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
               }@case ('back') {
               <!-- <svg-redis class="w-full max-w-20 h-auto max-h-20 block" /> -->
+              <svg-sql-server class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-mysql class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-postgres class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-sybase class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-mongo class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-oracle
-                class="w-full max-w-20 h-auto max-h-20 flex flex-col justify-center"
-              />
-              <!-- <svg-elastic-search
-                class="w-full max-w-20 h-auto max-h-20 block"
-              />
+              <svg-firebase class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-oracle class="w-20 h-20 flex flex-col justify-center" />
 
-              <svg-flask class="w-full max-w-20 h-auto max-h-20 block" /> -->
+              }@case ('devops') {
 
+              <svg-git class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-gitlab class="w-full max-w-20 h-auto max-h-20 block" />
               } } } @if (idxSection === 2) { @switch (stack.stack) { @case
               ('front') {
               <svg-figma class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-adobe-xd class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-miro class="w-full max-w-20 h-auto max-h-20 block" />
+              }@case ('devops') {
+              <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" />
               }
               <!-- <svg-elastic-search
                   class="w-full max-w-20 h-auto max-h-20 block"

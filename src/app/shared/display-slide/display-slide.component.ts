@@ -33,6 +33,15 @@ import { KotlinComponent } from '../logos/kotlin/kotlin.component';
 import { FlutterComponent } from '../logos/flutter/flutter.component';
 import { FigmaComponent } from '../logos/figma/figma.component';
 import { AdobeXdComponent } from '../logos/adobe-xd/adobe-xd.component';
+import { MiroComponent } from '../logos/miro/miro.component';
+import { FirebaseComponent } from '../logos/firebase/firebase.component';
+import { PythonComponent } from '../logos/python/python.component';
+import { RubyComponent } from '../logos/ruby/ruby.component';
+import { PhpComponent } from '../logos/php/php.component';
+import { NodejsComponent } from '../logos/nodejs/nodejs.component';
+import { NetframeworkComponent } from '../logos/netframework/netframework.component';
+import { NetcoreComponent } from '../logos/netcore/netcore.component';
+import { GitlabComponent } from '../logos/gitlab/gitlab.component';
 
 @Component({
   selector: 'app-display-slide',
@@ -46,17 +55,17 @@ import { AdobeXdComponent } from '../logos/adobe-xd/adobe-xd.component';
     // JqueryComponent,
     // BlazorComponent,
     // ThymeleafComponent,
-    RedisComponent,
+    // RedisComponent,
     MongoComponent,
-    ElasticSearchComponent,
+    // ElasticSearchComponent,
     PostgresComponent,
     MysqlComponent,
-    FlaskComponent,
+    // FlaskComponent,
     // PowerBiComponent,
     PostmanComponent,
     GitComponent,
     JenkingsComponent,
-    // SqlServerComponent,
+    SqlServerComponent,
     AwsComponent,
     AzureComponent,
     HtmlComponent,
@@ -72,6 +81,15 @@ import { AdobeXdComponent } from '../logos/adobe-xd/adobe-xd.component';
     FlutterComponent,
     FigmaComponent,
     AdobeXdComponent,
+    MiroComponent,
+    FirebaseComponent,
+    PythonComponent,
+    RubyComponent,
+    PhpComponent,
+    NodejsComponent,
+    NetframeworkComponent,
+    NetcoreComponent,
+    GitlabComponent,
   ],
   templateUrl: './display-slide.component.html',
   styles: `
@@ -98,8 +116,13 @@ export class DisplaySlideComponent {
       title: 'DevOps Tools',
       stack: 'devops',
       subsection: [
+        'Deployment',
+        'Versioning',
         'Testing',
-        // 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'
+        // 'Static Analisis',
+
+        // 'CI/CD',
+        // 'Cloud',
       ],
     },
     // {
@@ -107,9 +130,9 @@ export class DisplaySlideComponent {
     //   stack: 'bi',
 
     // },
-    {
-      title: 'Others',
-      stack: 'bi',
-    },
+    // {
+    //   title: 'Others',
+    //   stack: 'bi',
+    // },
   ];
 }
