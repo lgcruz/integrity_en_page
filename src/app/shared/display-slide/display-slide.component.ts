@@ -20,6 +20,13 @@ import { JenkingsComponent } from '@shared/logos/jenkings/jenkings.component';
 import { SqlServerComponent } from '@shared/logos/sql-server/sql-server.component';
 import { AwsComponent } from '@shared/logos/aws/aws.component';
 import { AzureComponent } from '@shared/logos/azure/azure.component';
+import { HtmlComponent } from "../logos/html/html.component";
+import { JavascriptComponent } from "../logos/javascript/javascript.component";
+import { TypescriptComponent } from "../logos/typescript/typescript.component";
+import { IonicComponent } from "../logos/ionic/ionic.component";
+import { JavaComponent } from "../logos/java/java.component";
+import { SybaseComponent } from "../logos/sybase/sybase.component";
+import { OracleComponent } from "../logos/oracle/oracle.component";
 
 @Component({
   selector: 'app-display-slide',
@@ -28,24 +35,31 @@ import { AzureComponent } from '@shared/logos/azure/azure.component';
     CommonModule,
     AngularComponent,
     ReactComponent,
-    VueComponent,
-    AspnetComponent,
-    JqueryComponent,
-    BlazorComponent,
-    ThymeleafComponent,
+    // VueComponent,
+    // AspnetComponent,
+    // JqueryComponent,
+    // BlazorComponent,
+    // ThymeleafComponent,
     RedisComponent,
     MongoComponent,
     ElasticSearchComponent,
     PostgresComponent,
     MysqlComponent,
     FlaskComponent,
-    PowerBiComponent,
+    // PowerBiComponent,
     PostmanComponent,
     GitComponent,
     JenkingsComponent,
-    SqlServerComponent,
+    // SqlServerComponent,
     AwsComponent,
-    AzureComponent
+    AzureComponent,
+    HtmlComponent,
+    JavascriptComponent,
+    TypescriptComponent,
+    IonicComponent,
+    JavaComponent,
+    SybaseComponent,
+    OracleComponent
 ],
   templateUrl: './display-slide.component.html',
   styles: `
@@ -58,25 +72,34 @@ import { AzureComponent } from '@shared/logos/azure/azure.component';
 export class DisplaySlideComponent {
   public stackList = [
     {
-      title: 'Frontend',
+      title: 'Frontend Development',
       stack: 'front',
+
       subsection: [
-        // 'Web', 'Mobile', 'Desktop'
+        'Languages', 'Mobile', 'UX/UI Design'
       ],
     },
     {
-      title: 'Backend ',
+      title: 'Backend Development',
       stack: 'back',
-      // subsection: ['Languages', 'Databases'],
+      subsection: ['Languages', 'Databases'],
     },
     {
-      title: 'Business Intelligence',
-      stack: 'bi',
-    },
-    {
-      title: 'DevOps',
+      title: 'DevOps Tools',
       stack: 'devops',
-      // subsection: ['Testing', 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'],
+      subsection: ['Testing',
+      // 'Static Analisis', 'Deployment', 'Versioning', 'CI/CD', 'Cloud'
+    ],
+    },
+    // {
+    //   title: 'Business Intelligence',
+    //   stack: 'bi',
+
+    // },
+    {
+      title: 'Others',
+      stack: 'bi',
+
     },
   ];
 }

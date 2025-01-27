@@ -1,72 +1,91 @@
 <div class="flex justify-center">
   <h2 class="text-3xl sm:text-5xl text-center font-bold text-[#1e4a98] mb-8">
-    Tools & Technologies we use
+    Tools & Technologies used
   </h2>
 </div>
 <div class="w-full">
   <div class="w-full h-auto flex justify-center relative p-0 2sm:p-10">
-    <div
+    <!-- <div
       class="w-full h-full absolute bg-cover brightness-50 bg-center filter top-0 bottom-0 z-[-1]"
       style="background-image: url('assets/img/office-laptops.jpg')"
-    ></div>
-    <div class="grid grid-cols-1 md:grid-cols-2 justify-center w-full gap-16">
+    ></div> -->
+    <div class="grid grid-cols-1 justify-center w-full gap-16">
       @for (stack of stackList; track $index; let total = $count) {
       <div
-        class="box-border flex flex-col justify-center items-center relative rounded-3xl flex-1"
+        class="box-border flex flex-row justify-center items-center relative sm:rounded-b-3xl sm:rounded-tr-3xl flex-1 bg-gray-100 sm:mx-8"
       >
-        <div
+        <!-- <div
           [ngClass]="{
             'absolute top-0 left-0 rounded-none sm:rounded-xl bg-blend-overlay w-full h-full z-[-1] bg-slate-200 filter brightness-150 opacity-70': true,
           }"
-        ></div>
-        <h2
-          class="text-grey-800 min-w-[300px] text-2xl md:text-3xl lg:text-4xl font-semibold text-center mt-8 mb-4"
+        ></div> -->
+        <p
+          class="text-white bg-gray-700 w-full sm:w-auto 2sm:rounded-t-xl sm:rounded-tl-xl absolute top-[-28px] left-0 z-10 text-lg font-semibold text-center px-4"
         >
           {{ stack.title }}:
-        </h2>
-        @if (stack.subsection) {
-        <div class="flex flex-wrap flex-row">
-          @for (section of stack.subsection; track $index) {
+        </p>
 
-          <div class="bg-gray-300 rounded-t-lg px-2 pt-2">{{ section }}</div>
-          }
-        </div>
-        }
         <div
-          class="flex rounded-none sm:rounded-xl items-center overflow-hidden py-4 mb-6 mx-0 2sm:mx-6 bg-gray-300"
+          class="flex flex-col w-full h-full rounded-none sm:rounded-r-xl justify-center overflow-hidden p-4"
         >
+          <!-- @if (stack.subsection) {
+          <div class="flex flex-wrap flex-row w-1/2">
+            @for (section of stack.subsection; track $index) {
+
+            <div class="bg-gray-300 rounded-t-lg px-2 pt-2">{{ section }}</div>
+            }
+          </div>
+          } -->
+          @for (section of stack.subsection; track $index; let idxSection
+          =$index) {
+          <p class="text-xl mb-2">{{ section }}:</p>
           <div class="overflow-y-auto scroll-smooth max-h-[344px]">
-            <div class="flex flex-wrap justify-center box-border gap-4 mx-2">
-              @switch (stack.stack) { @case ('front') {
+            <div class="flex flex-wrap justify-start box-border gap-4 mx-2">
+              @if (idxSection === 0) { @switch (stack.stack) { @case ('front') {
+              <svg-html class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-javascript class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-typescript class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-angular class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-vue class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-aspnet class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-jquery class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-blazor class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-thymeleaf class="w-full max-w-20 h-auto max-h-20 block" />
+              <!-- <svg-vue class="w-full max-w-20 h-auto max-h-20 block" />
+                <svg-aspnet class="w-full max-w-20 h-auto max-h-20 block" />
+                <svg-jquery class="w-full max-w-20 h-auto max-h-20 block" />
+                <svg-blazor class="w-full max-w-20 h-auto max-h-20 block" />
+                <svg-thymeleaf class="w-full max-w-20 h-auto max-h-20 block" /> -->
               } @case ('back') {
-              <svg-redis class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-mongo class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-elastic-search
-                class="w-full max-w-20 h-auto max-h-20 block"
-              />
-              <svg-postgres class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-mysql class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-flask class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-java class="w-full max-w-20 h-auto max-h-20 block" />
 
               } @case ('bi') {
-              <svg-power-bi class="w-full max-w-20 h-auto max-h-20 block" />
-              <svg-sql-server class="w-full max-w-20 h-auto max-h-20 block" />
+              <!-- <svg-power-bi class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-sql-server class="w-full max-w-20 h-auto max-h-20 block" /> -->
               } @case ('devops') {
               <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-git class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-aws class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-azure class="w-full max-w-20 h-auto max-h-20 block" />
-              } }
+              } } } @if (idxSection === 1) { @switch (stack.stack) { @case
+              ('front') {
+              <svg-ionic class="w-full max-w-20 h-20 max-h-20 block" />
+              }@case ('back') {
+              <!-- <svg-redis class="w-full max-w-20 h-auto max-h-20 block" /> -->
+              <svg-mysql class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-postgres class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-sybase class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-mongo class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-oracle
+                class="w-full max-w-20 h-auto max-h-20 flex flex-col justify-center"
+              />
+              <!-- <svg-elastic-search
+                class="w-full max-w-20 h-auto max-h-20 block"
+              />
+
+              <svg-flask class="w-full max-w-20 h-auto max-h-20 block" /> -->
+
+              } } }
             </div>
           </div>
+          }
         </div>
       </div>
 

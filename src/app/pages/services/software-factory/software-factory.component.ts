@@ -9,6 +9,7 @@ import { DisplaySlideComponent } from '../../../shared/display-slide/display-sli
 import { AddUserComponent } from '@shared/icons/add-user/add-user.component';
 import { ProjectPhasesComponent } from './components/project-phases/project-phases.component';
 import { TestModuleComponent } from "./components/test-module/test-module.component";
+import { IconoVialesComponent } from "../../../shared/icons/icono-viales/icono-viales.component";
 
 @Component({
   selector: 'app-software-factory',
@@ -23,7 +24,8 @@ import { TestModuleComponent } from "./components/test-module/test-module.compon
     DisplaySlideComponent,
     AddUserComponent,
     ProjectPhasesComponent,
-    TestModuleComponent
+    // TestModuleComponent,
+    IconoVialesComponent
 ],
   templateUrl: './software-factory.component.html',
   styles: `
@@ -34,17 +36,23 @@ import { TestModuleComponent } from "./components/test-module/test-module.compon
 export default class SoftwareFactoryComponent {
   public serviceTypes = [
     {
-      title: 'New Developments',
+      title: 'Custom Software Development',
       icon: 'steps',
       detail:
-        'Creating new features or solutions to meet evolving business needs not supported by current systems. ',
+        'Creating custom software to meet evolving business needs not supported by current systems. ',
     },
     {
-      title: 'Application Innovation & Enhancement',
-      icon: 'gears',
+      title: 'QA and Testing',
+      icon: 'test',
       detail:
-        'Enhancing existing solutions and optimizing performance. Adapting to changes in the platform or operating environment.',
+        'Make your technology bulletproof, with manual and automated testing.',
     },
+    // {
+    //   title: 'Application Innovation & Enhancement',
+    //   icon: 'gears',
+    //   detail:
+    //     'Enhancing existing solutions and optimizing performance. Adapting to changes in the platform or operating environment.',
+    // },
     {
       title: 'Solution Optimization',
       icon: 'improve',
