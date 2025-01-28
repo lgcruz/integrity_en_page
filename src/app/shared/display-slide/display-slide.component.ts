@@ -42,6 +42,18 @@ import { NodejsComponent } from '../logos/nodejs/nodejs.component';
 import { NetframeworkComponent } from '../logos/netframework/netframework.component';
 import { NetcoreComponent } from '../logos/netcore/netcore.component';
 import { GitlabComponent } from '../logos/gitlab/gitlab.component';
+import { DartComponent } from "../logos/dart/dart.component";
+import { JunitComponent } from "../logos/junit/junit.component";
+import { SpringComponent } from "../logos/spring/spring.component";
+import { SwaggerComponent } from "../logos/swagger/swagger.component";
+import { SeleniumComponent } from "../logos/selenium/selenium.component";
+import { JmeterComponent } from "../logos/jmeter/jmeter.component";
+import { OpenshiftComponent } from "../logos/openshift/openshift.component";
+import { DockerComponent } from "../logos/docker/docker.component";
+import { LambdaComponent } from "../logos/lambda/lambda.component";
+import { GlueComponent } from "../logos/glue/glue.component";
+import { S3bucketComponent } from "../logos/s3bucket/s3bucket.component";
+import { BitbucketComponent } from "../logos/bitbucket/bitbucket.component";
 
 @Component({
   selector: 'app-display-slide',
@@ -90,7 +102,19 @@ import { GitlabComponent } from '../logos/gitlab/gitlab.component';
     NetframeworkComponent,
     NetcoreComponent,
     GitlabComponent,
-  ],
+    DartComponent,
+    JunitComponent,
+    SpringComponent,
+    SwaggerComponent,
+    SeleniumComponent,
+    JmeterComponent,
+    OpenshiftComponent,
+    DockerComponent,
+    LambdaComponent,
+    GlueComponent,
+    S3bucketComponent,
+    BitbucketComponent
+],
   templateUrl: './display-slide.component.html',
   styles: `
     :host {
@@ -110,7 +134,7 @@ export class DisplaySlideComponent {
     {
       title: 'Backend Development',
       stack: 'back',
-      subsection: ['Languages', 'Databases'],
+      subsection: ['Languages', 'Databases', 'Framework'],
     },
     {
       title: 'DevOps Tools',
@@ -121,8 +145,8 @@ export class DisplaySlideComponent {
         'Testing',
         // 'Static Analisis',
 
-        // 'CI/CD',
-        // 'Cloud',
+        'CI/CD',
+        'Cloud',
       ],
     },
     // {

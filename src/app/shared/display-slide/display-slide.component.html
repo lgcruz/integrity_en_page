@@ -75,6 +75,7 @@
               <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" /> -->
               <svg-aws class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-azure class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-openshift class="w-full max-w-20 h-auto max-h-20 block" />
               } } } @if (idxSection === 1) { @switch (stack.stack) { @case
               ('front') {
               <svg-ionic class="w-full max-w-20 h-20 max-h-20 block" />
@@ -83,6 +84,7 @@
               <svg-kotlin class="w-full max-w-20 h-20 max-h-20 block" />
               <svg-flutter class="w-full max-w-20 h-20 max-h-20 block" />
               <svg-react class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-dart class="w-full max-w-20 h-auto max-h-20 block" />
               }@case ('back') {
               <!-- <svg-redis class="w-full max-w-20 h-auto max-h-20 block" /> -->
               <svg-sql-server class="w-full max-w-20 h-auto max-h-20 block" />
@@ -97,14 +99,23 @@
 
               <svg-git class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-gitlab class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-bitbucket class="w-full max-w-20 h-auto max-h-20 block" />
               } } } @if (idxSection === 2) { @switch (stack.stack) { @case
               ('front') {
               <svg-figma class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-adobe-xd class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-miro class="w-full max-w-20 h-auto max-h-20 block" />
+              }@case ('back') {
+              <!-- <svg-redis class="w-full max-w-20 h-auto max-h-20 block" /> -->
+              <svg-spring class="w-20 h-20 block" />
+
               }@case ('devops') {
               <svg-postman class="w-full max-w-20 h-auto max-h-20 block" />
               <svg-jenkings class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-junit class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-swagger class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-selenium class="w-full max-w-20 h-auto max-h-20 block" />
+              <!-- <svg-jmeter class="w-20 h-20 block" /> -->
               }
               <!-- <svg-elastic-search
                   class="w-full max-w-20 h-auto max-h-20 block"
@@ -112,7 +123,15 @@
 
                 <svg-flask class="w-full max-w-20 h-auto max-h-20 block" /> -->
 
-              } }
+              } } @if (idxSection === 3) { @switch (stack.stack) { @case
+              ('devops') {
+              <svg-docker class="w-full max-w-20 h-auto max-h-20 block" />
+              }}} @if (idxSection === 4) { @switch (stack.stack) { @case
+              ('devops') {
+              <svg-lambda class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-glue class="w-full max-w-20 h-auto max-h-20 block" />
+              <svg-s3bucket class="w-full max-w-20 h-auto max-h-20 block" />
+              }}}
             </div>
           </div>
           }
