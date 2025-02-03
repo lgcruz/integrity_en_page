@@ -1,0 +1,46 @@
+<div
+  class="slider w-full overflow-hidden"
+  [style]="{
+    '--height': '135px',
+    '--width': '175px',
+    '--quantity': this.quantity,
+    '--timer': this.quantity + 's',
+    maskImage: 'linear-gradient(to right,transparent,#000 10% 90%,transparent)',
+  }"
+>
+  <div
+    class="list flex w-full relative pb-4"
+    [style]="{
+      minWidth: 'calc(var(--width) * var(--quantity))',
+      height: 'var(--height)',
+      transform: 'translateX(calc('+this.translate+'%))',
+
+    }"
+  >
+    @for(image of listado; track $index) {
+    <div
+      class="item absolute right-[100%]"
+      [style]="{
+        height: 'var(--height)',
+        width: 'var(--width)',
+        animationDelay:
+          'calc((var(--timer)/var(--quantity)) * (var(--position) - 1) )',
+        animationDuration: 'var(--timer)',
+        animationIterationCount: 'infinite',
+        animationName: 'autoRun',
+        animationTimingFunction: 'linear',
+
+      }"
+      [style.--position]="$index"
+    >
+      <img
+        class="object-contain w-full aspect-[3/2]"
+        [srcset]="'/' + this.rutaclientes + image"
+        onerror="this.style.display='none'"
+        width="var(--width)"
+        height="var(--height)"
+      />
+    </div>
+    }
+  </div>
+</div>

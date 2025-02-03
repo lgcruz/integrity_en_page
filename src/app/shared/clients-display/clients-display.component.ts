@@ -1,22 +1,28 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SliderProComponent } from "../slider-pro/slider-pro.component";
 
 @Component({
-  selector: 'clients-alliances-sliders',
+  selector: 'clients-display',
   standalone: true,
-  imports: [],
-  templateUrl: './clients-alliances.component.html',
+  imports: [SliderProComponent],
+  templateUrl: './clients-display.component.html',
   styles: `
     :host {
       display: block;
+    }
+    .slider {
+      height: var(--height);
+    }
+    .slider .list {
+
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ClientsAlliancesComponent {
   rutaclientes: string = 'assets/img/socios/clientes';
-  rutaalianzas: string = 'assets/img/socios/alianzas';
   clientes: string[] = [];
-  alianzas: string[] = [];
+  renderStamp = Date.now()
 
   constructor() {
     this.mostrarimg();
@@ -25,7 +31,6 @@ export class ClientsAlliancesComponent {
   mostrarimg() {
     for (let i = 1; i <= 29; i++) {
       this.clientes.push(this.rutaclientes + '/' + i + '.png');
-      if (i <= 10) this.alianzas.push(this.rutaalianzas + '/' + i + '.png');
     }
   }
 }

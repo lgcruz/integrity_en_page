@@ -102,12 +102,22 @@ div.rotate-y-axis:hover img {
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 
+
 @keyframes jiggle {
   0% {
     transform: rotate(-1deg);
   }
   50% {
     transform: rotate(1deg);
+  }
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width)*-1);
   }
 }
 

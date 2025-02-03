@@ -15,6 +15,7 @@ module.exports = {
         lg: "0 8px 16px var(--tw-shadow-color)",
       },
       screens: {
+        xs: "400px",
         "2sm": "350px",
       },
       colors: {
