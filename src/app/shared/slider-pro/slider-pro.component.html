@@ -4,7 +4,7 @@
     '--height': '135px',
     '--width': '175px',
     '--quantity': this.quantity,
-    '--timer': this.quantity + 's',
+    '--timer': this.timer + 's',
     maskImage: 'linear-gradient(to right,transparent,#000 10% 90%,transparent)',
   }"
 >
@@ -35,7 +35,7 @@
     >
       <img
         class="object-contain w-full aspect-[3/2]"
-        [srcset]="'/' + this.rutaclientes + image"
+        [srcset]="'/' + image"
         onerror="this.style.display='none'"
         width="var(--width)"
         height="var(--height)"

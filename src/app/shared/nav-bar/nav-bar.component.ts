@@ -24,7 +24,7 @@ export class NavBarComponent {
   document: Document = inject(DOCUMENT)
 
   constructor() {
-    console.log(routes.map((route) => route ?? []).flat().filter((route) => route && route.path && route.title));
+    // console.log(routes.map((route) => route ?? []).flat().filter((route) => route && route.path && route.title));
   }
   toogleMenu() {
     this.activeMenu = !this.activeMenu;

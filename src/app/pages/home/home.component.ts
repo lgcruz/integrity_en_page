@@ -6,6 +6,7 @@ import { CircuitComponent } from '@shared/icons/circuirt/circuit.component';
 import { ClientsAlliancesComponent } from '../../shared/clients-display/clients-display.component';
 import { HeroComponent } from "./components/hero/hero.component";
 import { AlliancesComponent } from "../../shared/alliances-display/alliances-display.component";
+import { StackDisplayComponent } from "../../shared/stack-display/stack-display.component";
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ import { AlliancesComponent } from "../../shared/alliances-display/alliances-dis
     CircuitComponent,
     ClientsAlliancesComponent,
     HeroComponent,
-    AlliancesComponent
+    AlliancesComponent,
+    StackDisplayComponent
 ],
   templateUrl: './home.component.html',
   styles: `
